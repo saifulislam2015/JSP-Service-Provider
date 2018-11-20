@@ -1,0 +1,71 @@
+﻿@model Listener.Models.WorkOut
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<link href="~/css/bootstrap.css" rel="stylesheet" />
+
+
+<div ng-controller="WorkOutController" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="header">Create With WebApi and Stored Procedure</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label for="cname" class="col-sm-4 control-label">Date:</label>
+                            <div class="col-sm-8 space">
+                                @Html.TextBoxFor(model => model.Date, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Date)
+                                @*<input type="text" class="form-control" id="pname" placeholder="please enter date" ng-model="newproduct.Date" required />*@
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address" class="col-sm-4 control-label">Distance:</label>
+                            <div class="col-sm-8 space">
+                                @Html.TextAreaFor(model => model.distanceInMenters, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.distanceInMenters)
+                                @*<input type ="text" class="form-control" id="pdescription" placeholder="please enter distance" ng-model="newproduct.DistanceInMeters" required>*@
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="country" class="col-sm-4 control-label">Time(Seconds):</label>
+                            <div class="col-sm-8 space">
+                                @Html.TextBoxFor(model => model.TimeInSeconds, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.TimeInSeconds)
+                                @*<input type="text" class="form-control" id="punitprice" placeholder="please enter your country" ng-model="newproduct.TimeInSeconds" required />*@
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="form-group space">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <p>
+                                    <input type="submit" value="Create" />
+                                </p>
+
+                            </div>
+                        </div>
+                        <br />
+
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

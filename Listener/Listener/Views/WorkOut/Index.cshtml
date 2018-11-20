@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Listener.Models.WorkOut>
+
+@{
+    ViewBag.Title = "WorkOut";
+}
+
+<link href="~/css/bootstrap.css" rel="stylesheet" />
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ActionLink("Add WorkOut", "Create")
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" style="width: 800px; margin-left: 170px;">
+                    <tr>
+                        <th>Date</th>
+                        <th>Distance</th>
+                        <th>Time</th>
+                        <th>Actions</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.distanceInMenters)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TimeInSeconds)
+                            </td>
+
+                            <td>
+                                    <p><a ng-click="edit()" href="javascript:void(0);">Edit</a> | <a ng-click="delete()" href="javascript:void(0);">Delete</a></p>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+    @*<div class="form-group">
+
+
+            <table class="table table-responsive" style="width:400px">
+                <tr>
+                    <th>
+                        Date
+                    </th>
+                    <th>
+                        Distance
+                    </th>
+                    <th>
+                        Time
+                    </th>
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DistanceInMeters)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TimeInSeconds)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>*@
+</div>

@@ -1,0 +1,6 @@
+E:\Demo\Listener\Listener\obj\Debug\netcoreapp2.1\Listener1.csprojAssemblyReference.cache
+E:\Demo\Listener\Listener\obj\Debug\netcoreapp2.1\Listener1.csproj.CoreCompileInputs.cache
+E:\Demo\Listener\Listener\obj\Debug\netcoreapp2.1\Listener1.RazorAssemblyInfo.cache
+E:\Demo\Listener\Listener\obj\Debug\netcoreapp2.1\Listener1.RazorAssemblyInfo.cs
+E:\Demo\Listener\Listener\obj\Debug\netcoreapp2.1\Listener1.AssemblyInfoInputs.cache
+E:\Demo\Listener\Listener\obj\Debug\netcoreapp2.1\Listener1.AssemblyInfo.cs
